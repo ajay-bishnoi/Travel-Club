@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Travel Club</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/root.css">
+    <link rel="icon" href="./assets/img/svg/page-logo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body class="overflow_hidden">
+    <!-- loadder -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader d-flex justify-content-center flex-column align-items-center ">
+            <div class="d-flex align-items-center gap-04 pointer">
+                <img src="./assets/img/svg/page-logo.svg" alt="page-logo">
+                <h3 class="mb-0 fw-400 fs-28 lh-36 white-fa ff-racing">The Travel Club</h3>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <header class="header-bg position-relative z-3">
+        <nav class="py-24 layer">
+            <div class="container-1140 w-100">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center gap-04 pointer">
+                        <img src="./assets/img/svg/page-logo.svg" alt="page-logo">
+                        <h3 class="mb-0 fw-400 fs-28 lh-36 white-fa ff-racing">The Travel Club</h3>
+                    </div>
+                    <ul class="ps-0 mb-0 d-flex align-items-center gap-32 moblieView closeNav">
+                        <li><a onclick="navWorking()" class="fw-500 fs-16 lh-24 white nav-linkss ff-popins"
+                                href="#Home">Home</a>
+                        </li>
+                        <li><a onclick="navWorking()" class="fw-500 fs-16 lh-24 white nav-linkss ff-popins"
+                                href="#Token">Token</a>
+                        </li>
+                        <li><a onclick="navWorking()" class="fw-500 fs-16 lh-24 white nav-linkss ff-popins"
+                                href="#FAQs">FAQs</a>
+                        </li>
+                        <li><a onclick="navWorking()" class="fw-500 fs-16 lh-24 white nav-linkss ff-popins"
+                                href="#About">About</a>
+                        </li>
+                        <li><a onclick="navWorking()" class="fw-500 fs-16 lh-24 white nav-linkss ff-popins"
+                                href="#Contact Us">Contact Us</a>
+                        </li>
+                        <button class="fw-600 fs-16 lh-24 white connectBtn d-sm-none ff-popins">Connect wallet</button>
+                    </ul>
+                    <button class="fw-600 fs-16 lh-24 white connectBtn d-none d-sm-block ff-popins">Connect
+                        wallet</button>
+                    <div class="menu d-lg-none" onclick="openNav()">
+                        <span></span>
+                        <span class="my-2"></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- hero -->
+        <section class="position-relative z-3 py-140-60">
+            <!-- moon  -->
+            <img src="./assets/img/svg/moon.svg" class="position-absolute moonPosition z-n1" alt="moon-image">
+            <div class="container-1140">
+                <h1 class="white text-center fw-400 fs-64 lh-75 mb-0">Tokenized And Decentralized
+                    <span class="d-block blue-line position-relative">Travel Platform</span>
+                </h1>
+                <!-- card -->
+                <div class="herocard mx-auto mt-65 text-center">
+                    <ul class="ps-0 mb-0 d-flex gap-20 align-items-center justify-content-center flex-wrap">
+                        <li class="fw-500 mb-0 fs-16 lh-24 white navItem ff-popins pointer">Stays</li>
+                        <li class="fw-500 mb-0 fs-16 lh-24 white navItem ff-popins pointer">Flights</li>
+                        <li class="fw-500 mb-0 fs-16 lh-24 white navItem ff-popins pointer">Cars</li>
+                        <li class="fw-500 mb-0 fs-16 lh-24 white navItem ff-popins pointer">Packages</li>
+                        <li class="fw-500 mb-0 fs-16 lh-24 white navItem ff-popins pointer">Things to do</li>
+                        <li class="fw-500 mb-0 fs-16 lh-24 white navItem ff-popins pointer">Cruises</li>
+                    </ul>
+                    <div class="d-flex justify-content-sm-end justify-content-center mt-29">
+                        <h3 class="fw-400 fs-14 lh-21 white mb-0 pointer ff-popins">1 room, 2 travelers
+                            <span class="ml-10">
+                                <svg width="10" height="6" viewBox="0 0 10 6" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 0.5L5 4.5L9 0.5" stroke="white" />
+                                </svg>
+                            </span>
+                        </h3>
+                    </div>
+                    <div class="row mt-10">
+                        <div class="col-md-6 col-12 mb-0 mb-sm-4 mb-3">
+                            <div class="inputCard d-flex gap-3 align-items-center">
+                                <svg width="18" height="22" viewBox="0 0 18 22" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.00001 0.591797C6.81276 0.594377 4.71584 1.4644 3.16923 3.01102C1.62261 4.55763 0.752589 6.65455 0.750009 8.8418C0.747389 10.6292 1.33124 12.3681 2.41201 13.7918C2.41201 13.7918 2.63701 14.088 2.67376 14.1308L9.00001 21.5918L15.3293 14.127C15.3623 14.0873 15.588 13.7918 15.588 13.7918L15.5888 13.7895C16.669 12.3665 17.2526 10.6284 17.25 8.8418C17.2474 6.65455 16.3774 4.55763 14.8308 3.01102C13.2842 1.4644 11.1873 0.594377 9.00001 0.591797ZM9.00001 11.8418C8.40666 11.8418 7.82665 11.6658 7.3333 11.3362C6.83995 11.0066 6.45543 10.538 6.22837 9.98985C6.00131 9.44167 5.9419 8.83847 6.05765 8.25653C6.17341 7.67458 6.45913 7.14003 6.87869 6.72048C7.29825 6.30092 7.83279 6.0152 8.41474 5.89944C8.99668 5.78369 9.59988 5.8431 10.1481 6.07016C10.6962 6.29722 11.1648 6.68174 11.4944 7.17509C11.8241 7.66843 12 8.24845 12 8.8418C11.999 9.63714 11.6826 10.3996 11.1202 10.962C10.5578 11.5244 9.79535 11.8408 9.00001 11.8418Z"
+                                        fill="#FAFAFA" />
+                                </svg>
+                                <input type="search" placeholder="Going to"
+                                    class="fw-300 fs-16 lh-24 white border-0 w-100 ff-popins">
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-12 ">
+                            <div class="inputCard d-flex align-items-center  justify-content-between">
+                                <div class="d-flex gap-10">
+                                    <img src="./assets/img/svg/calendar.svg" alt="calendar">
+                                    <div class="input-container">
+                                        <h4 class="fw-300 fs-14 lh-15 white mb-0 ff-popins">Check-In</h4>
+                                        <h2 id="dateDisplay" class="mb-0 fw-300 fs-16 lh-24 white ff-popins">June 29
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column gap-07">
+                                    <svg id="upArrow" width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M1.125 11.4576H13.875C14.0041 11.4572 14.1306 11.4216 14.241 11.3546C14.3513 11.2877 14.4413 11.1919 14.5013 11.0776C14.5613 10.9632 14.5889 10.8347 14.5813 10.7059C14.5736 10.577 14.531 10.4527 14.458 10.3462L8.08296 1.13791C7.81875 0.756115 7.18267 0.756115 6.91775 1.13791L0.542749 10.3462C0.468959 10.4524 0.425686 10.5769 0.417633 10.7059C0.40958 10.835 0.437055 10.9638 0.497072 11.0784C0.557089 11.1929 0.647353 11.2889 0.758057 11.3557C0.868762 11.4226 0.995672 11.4578 1.125 11.4576Z"
+                                            fill="#F8F8F8" />
+                                    </svg>
+                                    <svg id="downArrow" width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.875 0.542385H1.125C0.995912 0.542789 0.869379 0.578393 0.759021 0.645361C0.648663 0.71233 0.558658 0.808127 0.498694 0.922443C0.438731 1.03676 0.41108 1.16527 0.418718 1.29413C0.426356 1.42299 0.468993 1.54733 0.542041 1.65376L6.91704 10.8621C7.18125 11.2439 7.81733 11.2439 8.08225 10.8621L14.4573 1.65376C14.531 1.54755 14.5743 1.42315 14.5824 1.29407C14.5904 1.165 14.5629 1.03618 14.5029 0.921621C14.4429 0.807063 14.3526 0.711143 14.2419 0.644283C14.1312 0.577423 14.0043 0.542182 13.875 0.542385ZM7.5 9.21451L2.4765 1.95905H12.5235L7.5 9.21451Z"
+                                            fill="#F8F8F8" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-12 mt-sm-0 mt-3">
+                            <div class="inputCard d-flex align-items-center  justify-content-between ">
+                                <div class="d-flex gap-10 ">
+                                    <img src="./assets/img/svg/calendar.svg" alt="calendar">
+                                    <div class="input-container">
+                                        <h4 class="fw-300 fs-14 lh-15 white mb-0 ff-popins">Check-In</h4>
+                                        <h2 class="mb-0 fw-300 fs-16 lh-24 white ff-popins">June 29</h2>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column gap-07">
+                                    <svg id="upArrow" width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M1.125 11.4576H13.875C14.0041 11.4572 14.1306 11.4216 14.241 11.3546C14.3513 11.2877 14.4413 11.1919 14.5013 11.0776C14.5613 10.9632 14.5889 10.8347 14.5813 10.7059C14.5736 10.577 14.531 10.4527 14.458 10.3462L8.08296 1.13791C7.81875 0.756115 7.18267 0.756115 6.91775 1.13791L0.542749 10.3462C0.468959 10.4524 0.425686 10.5769 0.417633 10.7059C0.40958 10.835 0.437055 10.9638 0.497072 11.0784C0.557089 11.1929 0.647353 11.2889 0.758057 11.3557C0.868762 11.4226 0.995672 11.4578 1.125 11.4576Z"
+                                            fill="#F8F8F8" />
+                                    </svg>
+                                    <svg id="downArrow" width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.875 0.542385H1.125C0.995912 0.542789 0.869379 0.578393 0.759021 0.645361C0.648663 0.71233 0.558658 0.808127 0.498694 0.922443C0.438731 1.03676 0.41108 1.16527 0.418718 1.29413C0.426356 1.42299 0.468993 1.54733 0.542041 1.65376L6.91704 10.8621C7.18125 11.2439 7.81733 11.2439 8.08225 10.8621L14.4573 1.65376C14.531 1.54755 14.5743 1.42315 14.5824 1.29407C14.5904 1.165 14.5629 1.03618 14.5029 0.921621C14.4429 0.807063 14.3526 0.711143 14.2419 0.644283C14.1312 0.577423 14.0043 0.542182 13.875 0.542385ZM7.5 9.21451L2.4765 1.95905H12.5235L7.5 9.21451Z"
+                                            fill="#F8F8F8" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <form
+                        class="d-flex align-items-center gap-30 mt-10 justify-content-center justify-content-md-start">
+                        <div class="d-flex align-items-center form-group">
+                            <input type="checkbox" id="flight">
+                            <label for="flight" class="fw-300 fs-16 lh-24 white ff-popins"> Add A Flight</label>
+                        </div>
+                        <div class="d-flex align-items-center form-group">
+                            <input type="checkbox" id="car">
+                            <label for="car" class="fw-300 fs-16 lh-24 white ff-popins"> Add A Car</label>
+                        </div>
+                    </form>
+                    <button class="fw-600 fs-16 lh-24 white connectBtn mt-30 ">Search</button>
+                </div>
+            </div>
+        </section>
+    </header>
+    <!-- About us -->
+    <section class="py-110-131 position-relative z-3 ">
+        <!-- ellips -->
+        <div class="aboutEllips"></div>
+        <img src="./assets/img/svg/star.svg" class="position-absolute top-0 end-0" alt="text-lg-start">
+        <img src="./assets/img/svg/star.svg" class="position-absolute bottom-0 start-0" alt="text-lg-start">
+        <div class="container-1140">
+            <div class="row d-flex align-items-center">
+                <div class="col-lg-6 col-12 d-flex justify-content-center justify-content-lg-start">
+                    <div class="max-509 w-100 text-lg-start text-center">
+                        <h2 class="mb-3 fw-400 fs-48 lh-56 white">About Us</h2>
+                        <p class="fw-400 fs-16 lh-24 white ff-popins opacity-08 mb-0">
+                            We are building a web3 tokenized and decentralized travel
+                            platform. Our expertise is in search related sites, and
+                            blockchain technology. 
+                        </p>
+                        <p class="fw-400 fs-16 lh-24 white ff-popins my-20-40 opacity-08">
+                            We will be creating a DAO with rewards for users. A DAO is a Decentralized Autonomous
+                            Organization and is something
+                            fairly common in the web3 and blockchain space. A DAO can be described as a transparent
+                            governing body, where each
+                            member typically shares a common goal, which is the best interest of the platform.
+                        </p>
+                        <button class="fw-600 fs-16 lh-24 white connectBtn">Get rewards</button>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12 d-flex justify-content-center justify-content-lg-start mt-lg-0 mt-5">
+                    <img src="./assets/img/png/aboutUs.png" class="w-100 max-535" alt="about-us-image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Popular Destinations -->
+    <section class="pb-160 position-relative z-3">
+        <div class="popularEllips"></div>
+        <img src="./assets/img/svg/star.svg" class="position-absolute bottom-0 end-0" alt="text-lg-start">
+        <div class="container-1140">
+            <h2 class="mb-106 fw-400 fs-48 lh-56 white text-center">Popular Destinations</h2>
+            <!--  -->
+            <div class="parent">
+                <div class=" position-relative">
+                    <img src="./assets/img/png/girl-enjoy.png" class="w-100 pointer" alt="nature-beauty">
+                    <span class="text-nowrap mb-0 fw-500 fs-16 lh-24 white-fa opacity-08 shilohText">Cir. Shiloh, Hawaii
+                        81063</span>
+                    <div class="mt-22 position-relative">
+                        <img src="./assets/img/png/popular4.png" class="w-100 pointer " alt="nature-beauty">
+                        <span class="text-nowrap mb-0 fw-500 fs-16 lh-24 white-fa opacity-08 shilohText">Cir. Shiloh,
+                            Hawaii
+                            81063</span>
+                    </div>
+
+                </div>
+                <div class=" position-relative">
+                    <img src="./assets/img/png/popular2.png" class="w-100 pointer" alt="nature-beauty">
+                    <span class="text-nowrap mb-0 fw-500 fs-16 lh-24 white-fa opacity-08 shilohText">Cir. Shiloh, Hawaii
+                        81063</span>
+                    <div class="mt-22 position-relative">
+                        <img src="./assets/img/png/popular5.png" class="w-100 pointer" alt="nature-beauty">
+                        <span class="text-nowrap mb-0 fw-500 fs-16 lh-24 white-fa opacity-08 shilohText">Cir. Shiloh,
+                            Hawaii
+                            81063</span>
+                    </div>
+                </div>
+                <div class=" position-relative">
+                    <img src="./assets/img/png/popular3.png" class="w-100 pointer" alt="nature-beauty">
+                    <span class="text-nowrap mb-0 fw-500 fs-16 lh-24 white-fa opacity-08 shilohText">Cir. Shiloh, Hawaii
+                        81063</span>
+                    <div class="mt-22 d-none d-lg-block position-relative">
+                        <img src="./assets/img/png/popular6.png" class="w-100 pointer " alt="nature-beauty">
+                        <span class="text-nowrap mb-0 fw-500 fs-16 lh-24 white-fa opacity-08 shilohText">Cir. Shiloh,
+                            Hawaii
+                            81063</span>
+                    </div>
+                </div>
+                <div class="d-lg-none  position-relative">
+                    <img src="./assets/img/png/popular6.png" class="w-100 pointer" alt="nature-beauty">
+                    <span class="text-nowrap mb-0 fw-500 fs-16 lh-24 white-fa opacity-08 shilohText">Cir. Shiloh, Hawaii
+                        81063</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Member Deals -->
+    <section class="pb-110 position-relative z-3">
+        <!-- ellips -->
+        <div class="Member1"></div>
+        <div class="Member2"></div>
+        <div class="container-1140">
+            <h2 class="mb-50 fw-400 fs-48 lh-56 white text-center">Member Deals</h2>
+            <div class="responsive">
+                <div class="dealCard w-100">
+                    <img src="./assets/img/png/deal1.png" class="w-100" alt="nature-img">
+                    <span class="fw-500 fs-16 lh-24 white-fa opacity-08 ff-popins">50% OFF</span>
+                    <div class="p-16-20">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex gap-11">
+                                <h5 class="fw-400 fs-24 mb-0 lh-28 white ">$1,100</h5>
+                                <h5 class="fw-400 fs-24 mb-0 lh-28 white text-decoration-line-through opacity-05">$1,999
+                                </h5>
+                            </div>
+                            <div class="d-flex align-items-center gap-6">
+                                <svg width="22" height="20" viewBox="0 0 22 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11 0L13.4697 7.60081H21.4616L14.996 12.2984L17.4656 19.8992L11 15.2016L4.53436 19.8992L7.00402 12.2984L0.538379 7.60081H8.53035L11 0Z"
+                                        fill="#FFAA4A" />
+                                </svg>
+                                <h6 class="fw-400 fs-20 lh-24 white mb-0">4.9</h6>
+                            </div>
+                        </div>
+                        <h3 class="mb-0 mt-3 fw-600 white ff-popins opacity-09 fs-20 lh-28">
+                            Et fringilla mauris hac dignissi amet facilisi.</h3>
+                    </div>
+                </div>
+                <div class="dealCard w-100">
+                    <img src="./assets/img/png/deal2.png" class="w-100" alt="nature-img">
+                    <span class="fw-500 fs-16 lh-24 white-fa opacity-08 ff-popins">50% OFF</span>
+                    <div class="p-16-20">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex gap-11">
+                                <h5 class="fw-400 fs-24 mb-0 lh-28 white ">$1,100</h5>
+                                <h5 class="fw-400 fs-24 mb-0 lh-28 white text-decoration-line-through opacity-05">$1,999
+                                </h5>
+                            </div>
+                            <div class="d-flex align-items-center gap-6">
+                                <svg width="22" height="20" viewBox="0 0 22 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11 0L13.4697 7.60081H21.4616L14.996 12.2984L17.4656 19.8992L11 15.2016L4.53436 19.8992L7.00402 12.2984L0.538379 7.60081H8.53035L11 0Z"
+                                        fill="#FFAA4A" />
+                                </svg>
+                                <h6 class="fw-400 fs-20 lh-24 white mb-0">4.8</h6>
+                            </div>
+                        </div>
+                        <h3 class="mb-0 mt-3 fw-600 white ff-popins opacity-09 fs-20 lh-28">
+                            Et fringilla mauris hac dignissi amet facilisi.</h3>
+                    </div>
+                </div>
+                <div class="dealCard w-100">
+                    <img src="./assets/img/png/deal3.png" class="w-100" alt="nature-img">
+                    <span class="fw-500 fs-16 lh-24 white-fa opacity-08 ff-popins">50% OFF</span>
+                    <div class="p-16-20">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex gap-11">
+                                <h5 class="fw-400 fs-24 mb-0 lh-28 white ">$1,100</h5>
+                                <h5 class="fw-400 fs-24 mb-0 lh-28 white text-decoration-line-through opacity-05">$1,999
+                                </h5>
+                            </div>
+                            <div class="d-flex align-items-center gap-6">
+                                <svg width="22" height="20" viewBox="0 0 22 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11 0L13.4697 7.60081H21.4616L14.996 12.2984L17.4656 19.8992L11 15.2016L4.53436 19.8992L7.00402 12.2984L0.538379 7.60081H8.53035L11 0Z"
+                                        fill="#FFAA4A" />
+                                </svg>
+                                <h6 class="fw-400 fs-20 lh-24 white mb-0">4.9</h6>
+                            </div>
+                        </div>
+                        <h3 class="mb-0 mt-3 fw-600 white ff-popins opacity-09 fs-20 lh-28">
+                            Et fringilla mauris hac dignissi amet facilisi.</h3>
+                    </div>
+                </div>
+                <div class="dealCard w-100">
+                    <img src="./assets/img/png/deal1.png" class="w-100" alt="nature-img">
+                    <span class="fw-500 fs-16 lh-24 white-fa opacity-08 ff-popins">50% OFF</span>
+                    <div class="p-16-20">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex gap-11">
+                                <h5 class="fw-400 fs-24 mb-0 lh-28 white ">$1,100</h5>
+                                <h5 class="fw-400 fs-24 mb-0 lh-28 white text-decoration-line-through opacity-05">$1,999
+                                </h5>
+                            </div>
+                            <div class="d-flex align-items-center gap-6">
+                                <svg width="22" height="20" viewBox="0 0 22 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11 0L13.4697 7.60081H21.4616L14.996 12.2984L17.4656 19.8992L11 15.2016L4.53436 19.8992L7.00402 12.2984L0.538379 7.60081H8.53035L11 0Z"
+                                        fill="#FFAA4A" />
+                                </svg>
+                                <h6 class="fw-400 fs-20 lh-24 white mb-0">4.9</h6>
+                            </div>
+                        </div>
+                        <h3 class="mb-0 mt-3 fw-600 white ff-popins opacity-09 fs-20 lh-28">
+                            Et fringilla mauris hac dignissi amet facilisi.</h3>
+                    </div>
+                </div>
+                <div class="dealCard w-100">
+                    <img src="./assets/img/png/deal2.png" class="w-100" alt="nature-img">
+                    <span class="fw-500 fs-16 lh-24 white-fa opacity-08 ff-popins">50% OFF</span>
+                    <div class="p-16-20">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex gap-11">
+                                <h5 class="fw-400 fs-24 mb-0 lh-28 white ">$1,100</h5>
+                                <h5 class="fw-400 fs-24 mb-0 lh-28 white text-decoration-line-through opacity-05">$1,999
+                                </h5>
+                            </div>
+                            <div class="d-flex align-items-center gap-6">
+                                <svg width="22" height="20" viewBox="0 0 22 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11 0L13.4697 7.60081H21.4616L14.996 12.2984L17.4656 19.8992L11 15.2016L4.53436 19.8992L7.00402 12.2984L0.538379 7.60081H8.53035L11 0Z"
+                                        fill="#FFAA4A" />
+                                </svg>
+                                <h6 class="fw-400 fs-20 lh-24 white mb-0">4.8</h6>
+                            </div>
+                        </div>
+                        <h3 class="mb-0 mt-3 fw-600 white ff-popins opacity-09 fs-20 lh-28">
+                            Et fringilla mauris hac dignissi amet facilisi.</h3>
+                    </div>
+                </div>
+                <div class="dealCard w-100">
+                    <img src="./assets/img/png/deal3.png" class="w-100" alt="nature-img">
+                    <span class="fw-500 fs-16 lh-24 white-fa opacity-08 ff-popins">50% OFF</span>
+                    <div class="p-16-20">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex gap-11">
+                                <h5 class="fw-400 fs-24 mb-0 lh-28 white ">$1,100</h5>
+                                <h5 class="fw-400 fs-24 mb-0 lh-28 white text-decoration-line-through opacity-05">$1,999
+                                </h5>
+                            </div>
+                            <div class="d-flex align-items-center gap-6">
+                                <svg width="22" height="20" viewBox="0 0 22 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11 0L13.4697 7.60081H21.4616L14.996 12.2984L17.4656 19.8992L11 15.2016L4.53436 19.8992L7.00402 12.2984L0.538379 7.60081H8.53035L11 0Z"
+                                        fill="#FFAA4A" />
+                                </svg>
+                                <h6 class="fw-400 fs-20 lh-24 white mb-0">4.9</h6>
+                            </div>
+                        </div>
+                        <h3 class="mb-0 mt-3 fw-600 white ff-popins opacity-09 fs-20 lh-28">
+                            Et fringilla mauris hac dignissi amet facilisi.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Tokenomics -->
+    <section class="token-bg py-80-180 position-relative z-3 overflow-hidden">
+        <!--  -->
+        <img src="./assets/img/png/TokenomicsLayer.png" class="position-absolute z-n1 top-0" alt="token-layer">
+        <img src="./assets/img/png/TB-layer.png" class="position-absolute z-n1 bottom-0" alt="token-layer">
+        <img src="./assets/img/svg/star.svg" class="position-absolute top-0 end-0 z-n1 d-none d-sm-block" alt="star">
+        <!--  -->
+        <div class="container-1140">
+            <h2 class="mb-50 fw-400 fs-48 lh-56 white text-center">Tokenomics: Powering Digital Economies</h2>
+            <div class="row d-flex justify-content-between align-items-center">
+                <div class="col-xl-5 col-lg-5 col-12 text-lg-start text-center">
+                    <img src="./assets/img/png/tokenimg.png" class="w-100 max-406" alt="ring-image">
+                </div>
+                <div class="col-xl-7 col-lg-6 col-12 mt-lg-0 mt-5 d-flex justify-content-lg-end justify-content-center">
+                    <div class="tokenCard w-100">
+                        <h3 class="fw-400 fs-36 lh-42 text-center white mb-0">Travel Club Metrics</h3>
+                        <div class="my-26-54 d-flex gap-30 justify-content-center justify-content-lg-start">
+                            <div class="d-flex flex-column gap-18">
+                                <h3 class="mb-0 fw-400 fs-20 lh-30 white ff-popins opacity-08">Max supply:</h3>
+                                <h3 class="mb-0 fw-400 fs-20 lh-30 white ff-popins opacity-08">Total supply:</h3>
+                                <h3 class="mb-0 fw-400 fs-20 lh-30 white ff-popins opacity-08">Circulating supply:</h3>
+                            </div>
+                            <div class="d-flex flex-column gap-18">
+                                <h3 class="fw-600 fs-20 lh-30 mb-0 ff-popins white">700 000 000</h3>
+                                <h3 class="fw-600 fs-20 lh-30 mb-0 ff-popins white">345 620 131</h3>
+                                <h3 class="fw-600 fs-20 lh-30 mb-0 ff-popins white">307 909 912 </h3>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-wrap gap-4 data1 justify-content-center justify-content-lg-start">
+                            <div class="d-flex gap-4">
+                                <div></div>
+                                <div>
+                                    <h4 class="d-block mb-0 fw-400 fs-16 lh-24 white opacity-08 ff-popins">
+                                        Farms/Launchpools</h4>
+                                    <h2 class="mb-0 fw-400 fs-32 lh-36 white">80.7%</h2>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-4">
+                                <div></div>
+                                <div>
+                                    <h4 class="d-block mb-0 fw-400 fs-16 lh-24 white opacity-08 ff-popins">Referral
+                                        Program
+                                    </h4>
+                                    <h2 class="mb-0 fw-400 fs-32 lh-36 white">4.3%</h2>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-4 d-lg-none d-xl-flex">
+                                <div></div>
+                                <div>
+                                    <h4 class="d-block mb-0 fw-400 fs-16 lh-24 white opacity-08 ff-popins">Team</h4>
+                                    <h2 class="mb-0 fw-400 fs-32 lh-36 white">9%</h2>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-140 data2 ">
+                                <div class="d-flex gap-4">
+                                    <div></div>
+                                    <div>
+                                        <h4 class="d-block mb-0 fw-400 fs-16 lh-24 white opacity-08 ff-popins">SAFU</h4>
+                                        <h2 class="mb-0 fw-400 fs-32 lh-36 white">1%</h2>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-4">
+                                    <div></div>
+                                    <div>
+                                        <h4 class="d-block mb-0 fw-400 fs-16 lh-24 white opacity-08 ff-popins">Investing
+                                            Fund
+                                        </h4>
+                                        <h2 class="mb-0 fw-400 fs-32 lh-36 white">5%</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-4 d-none d-lg-flex d-xl-none">
+                                <div></div>
+                                <div>
+                                    <h4 class="d-block mb-0 fw-400 fs-16 lh-24 white opacity-08 ff-popins">Team</h4>
+                                    <h2 class="mb-0 fw-400 fs-32 lh-36 white">9%</h2>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Meet Our Team -->
+    <section class="py-54-160 position-relative z-3">
+        <!-- ellips -->
+        <div class="team1"></div>
+        <div class="team2"></div>
+        <img src="./assets/img/svg/star.svg" class="position-absolute bottom-0 start-0 z-n1" alt="text-lg-start">
+        <div class="container-1140">
+            <h2 class="mb-50 fw-400 fs-48 lh-56 white text-center">Meet Our Team</h2>
+            <div class="responsive">
+                <div class="teamCard w-100">
+                    <img src="./assets/img/png/team1.png" class="w-100" alt="team-img">
+                    <div>
+                        <h3 class="fw-400 fs-24 lh-36 white mb-0"> Darlene Robertson</h3>
+                        <h4 class="fw-400 fs-16 lh-24 opacity-08 white mb-0"> CEO & Founder</h4>
+                    </div>
+                </div>
+                <div class="teamCard w-100">
+                    <img src="./assets/img/png/team2.png" class="w-100" alt="team-img">
+                    <div>
+                        <h3 class="fw-400 fs-24 lh-36 white mb-0"> Cameron Williamson</h3>
+                        <h4 class="fw-400 fs-16 lh-24 opacity-08 white mb-0"> CEO & Founder</h4>
+                    </div>
+                </div>
+                <div class="teamCard w-100">
+                    <img src="./assets/img/png/team3.png" class="w-100" alt="team-img">
+                    <div>
+                        <h3 class="fw-400 fs-24 lh-36 white mb-0"> Brooklyn Simmons</h3>
+                        <h4 class="fw-400 fs-16 lh-24 opacity-08 white mb-0"> CEO & Founder</h4>
+                    </div>
+                </div>
+                <div class="teamCard w-100">
+                    <img src="./assets/img/png/team2.png" class="w-100" alt="team-img">
+                    <div>
+                        <h3 class="fw-400 fs-24 lh-36 white mb-0"> Cameron Williamson</h3>
+                        <h4 class="fw-400 fs-16 lh-24 opacity-08 white mb-0"> CEO & Founder</h4>
+                    </div>
+                </div>
+                <div class="teamCard w-100">
+                    <img src="./assets/img/png/team3.png" class="w-100" alt="team-img">
+                    <div>
+                        <h3 class="fw-400 fs-24 lh-36 white mb-0"> Brooklyn Simmons</h3>
+                        <h4 class="fw-400 fs-16 lh-24 opacity-08 white mb-0"> CEO & Founder</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FAQs -->
+    <section class="pb-160 position-relative z-3 overflow-hidden">
+        <div class="fsqellips"></div>
+        <img src="./assets/img/svg/star.svg" class="position-absolute bottom-0 end-0" alt="text-lg-start">
+        <div class="container-1140">
+            <h1 class="fw-400 fs-48 lh-56 white mb-53 text-center">Frequently Asked Questions</h1>
+            <!-- faq -->
+            <div class="accordion mx-auto" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button fw-400 fs-20 lh-30 white" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                            aria-controls="collapseOne">
+                            <span>Q1. Rhoncus morbi sodales risus eget integer malesuada
+                                ultricies. Magnis at ornare sit netus velit.</span>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p class="fw-400 mb-0 ff-popins fs-16 lh-24 white-fa opacity-07 ">
+                                At congue consectetur pharetra morbi. Amet blandit vestibulum feugiat tempus urna
+                                laoreet mattis risus tempus. Imperdiet
+                                a integer viverra rhoncus viverra nunc.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed fw-400 fs-20 lh-30 white " type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                            aria-controls="collapseTwo">
+                            <span>Q2. Habitant elementum nibh vitae adipiscing volutpat a scelerisque neque.</span>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p class="fw-400 mb-0 ff-popins fs-16 lh-24 white-fa opacity-07 ">
+                                At congue consectetur pharetra morbi. Amet blandit vestibulum feugiat tempus urna
+                                laoreet mattis risus tempus. Imperdiet
+                                a integer viverra rhoncus viverra nunc.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed fw-400 fs-20 lh-30 white " type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                            aria-controls="collapseThree">
+                            <span>Q3. Condimentum cursus urna nulla et eget enim.</span>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p class="fw-400 mb-0 ff-popins fs-16 lh-24 white-fa opacity-07 ">
+                                At congue consectetur pharetra morbi. Amet blandit vestibulum feugiat tempus urna
+                                laoreet mattis risus tempus. Imperdiet
+                                a integer viverra rhoncus viverra nunc.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed fw-400 fs-20 lh-30 white pb-0" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                            aria-controls="collapseFour">
+                            <span>Q4.Vel egestas hendrerit pellentesque molestie fusce aliquet gravida proin.</span>
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p class="fw-400 mb-0 ff-popins fs-16 lh-24 white-fa opacity-07 pt-16 ">
+                                At congue consectetur pharetra morbi. Amet blandit vestibulum feugiat tempus urna
+                                laoreet mattis risus tempus. Imperdiet
+                                a integer viverra rhoncus viverra nunc.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="py-44-50 bg-black">
+        <div class="container-1140">
+            <div class="row d-flex justify-content-between">
+                <div class="col-xl-3 col-12">
+                    <div class="d-flex align-items-center gap-04 mb-26">
+                        <img src="./assets/img/svg/page-logo.svg" class="pointer" alt="page-logo">
+                        <h3 class="mb-0 fw-400 fs-28 lh-36 white-fa ff-racing pointer">The Travel Club</h3>
+                    </div>
+                    <p class="fw-400 fs-16 lh-26 opacity-07 white-fa ff-popins mb-0">
+                        At congue consectetur pharetra morbi. Amet blandit vestibulum feugiat tempus urna laoreet
+                    </p>
+                </div>
+                <div class="col-xl-9 col-12 mt-xl-0 mt-07 mt-sm-5 mt-4">
+                    <div class="row d-flex justify-content-lg-end">
+                        <div class="col-lg-2 col-sm-4 col-6">
+                            <ul class="d-flex flex-column gap-sm-3 gap-2 ps-0 mb-0">
+                                <li class="fw-400 fs-16 ff-popins lh-26 white-fa mb-02">Company</li>
+                                <li>
+                                    <a class="fw-400 fs-16 ff-popins lh-26 white-fa opacity-08 navItem"
+                                        href="#">About</a>
+                                </li>
+                                <li>
+                                    <a class="fw-400 fs-16 ff-popins lh-26 white-fa opacity-08 navItem" href="#">Privacy
+                                        Policy</a>
+                                </li>
+                                <li>
+                                    <a class="fw-400 fs-16 ff-popins lh-26 white-fa opacity-08 navItem"
+                                        href="#">Partnership</a>
+                                </li>
+                                <li>
+                                    <a class="fw-400 fs-16 ff-popins lh-26 white-fa opacity-08 navItem" href="#">FAQ</a>
+                                </li>
+                                <li>
+                                    <a class="fw-400 fs-16 ff-popins lh-26 white-fa opacity-08 navItem"
+                                        href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-sm-4 col-6">
+                            <div class="d-flex flex-column gap-sm-3 gap-2">
+                                <h3 class="fw-400 fs-16 lh-26 ff-popins mb-02 white-fa">Contact Us</h3>
+                                <h3 class="fw-400 fs-16 ff-popins lh-26 white-fa opacity-08 mb-0">
+                                    4517 Washington Ave. Manchester, Kentucky 39495
+                                </h3>
+                                <h3 class="fw-400 fs-16 ff-popins lh-26 white-fa opacity-08 mb-0">
+                                    +123 456 7890, +123 456 7890
+                                </h3>
+                            </div>
+                        </div>
+                        <div
+                            class="col-xl-2 col-lg-3 col-sm-4 col-6 d-flex justify-content-sm-end justify-content-xl-start mt-sm-0 mt-4">
+                            <ul class="d-flex flex-column gap-sm-3 gap-2 ps-0 mb-0">
+                                <li class="fw-400 fs-16 ff-popins lh-26 white-fa mb-02">Quick Links</li>
+                                <li><a class="fw-400 fs-16 ff-popins lh-26 navItem white-fa opacity-08"
+                                        href="#">Home</a></li>
+                                <li><a class="fw-400 fs-16 ff-popins lh-26 navItem white-fa opacity-08"
+                                        href="#">About</a></li>
+                                <li><a class="fw-400 fs-16 ff-popins lh-26 navItem white-fa opacity-08"
+                                        href="#">Token</a></li>
+                                <li><a class="fw-400 fs-16 ff-popins lh-26 navItem white-fa opacity-08" href="#">FAQ</a>
+                                </li>
+                                <li><a class="fw-400 fs-16 ff-popins lh-26 navItem white-fa opacity-08 text-nowrap"
+                                        href="#">Popular Destinations</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-sm-4 col-6 d-flex justify-content-lg-end mt-4 mt-sm-5 mt-lg-0">
+                            <div class="d-flex flex-column gap-sm-3 gap-2">
+                                <h3 class="fw-400 fs-16 lh-26 ff-popins mb-02 white-fa">Social Share</h3>
+                                <div class="d-flex align-items-center gap-32 social-icon">
+                                    <a target="_blank" href="https://twitter.com/"><svg width="28" height="24"
+                                            viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M25.804 1.76871C26.0929 1.77112 26.3756 1.8525 26.6215 2.00405C26.8675 2.1556 27.0673 2.37154 27.1993 2.62849C27.3313 2.88544 27.3905 3.17361 27.3705 3.46181C27.3505 3.75 27.2521 4.02723 27.0858 4.26348L25.49 6.5316C25.392 14.3207 22.787 19.6089 17.7469 22.2507C15.3451 23.4443 12.6915 24.0426 10.0099 23.9951C6.69401 24.0713 3.41735 23.2659 0.514696 21.6611C0.319433 21.5299 0.168521 21.3425 0.0818546 21.1238C-0.004812 20.9051 -0.0231644 20.6653 0.029217 20.4359C0.078256 20.2031 0.196719 19.9907 0.368972 19.8267C0.541225 19.6626 0.759171 19.5546 0.994049 19.517C2.944 19.2447 4.86417 18.7904 6.72944 18.1601C-1.62937 14.2931 0.193085 5.60046 0.989454 2.9311C1.06709 2.66608 1.21307 2.42615 1.41274 2.23538C1.61241 2.04462 1.85874 1.90973 2.12702 1.84425C2.39529 1.77877 2.67607 1.78501 2.94118 1.86234C3.20628 1.93967 3.44638 2.08537 3.63738 2.28481C6.08413 4.80598 9.32824 6.40233 12.8186 6.80268C12.7567 5.8647 12.9016 4.92458 13.2433 4.04886C13.585 3.17313 14.115 2.38321 14.7957 1.73501C15.9751 0.615757 17.5407 -0.0056661 19.1666 3.89365e-05C20.7925 0.00574397 22.3537 0.638138 23.5252 1.76564L25.804 1.76871ZM2.23148 20.8693C5.0831 22.2048 11.7665 23.6551 17.0363 20.8938C21.5618 18.5215 23.8912 13.6469 23.9601 6.40449C23.9632 6.16501 24.039 5.93214 24.1776 5.73677L25.8331 3.38135L25.7703 3.30018C24.977 3.28946 24.1944 3.27874 23.3965 3.30018C23.0854 3.29306 22.7876 3.17272 22.5588 2.96173C21.6772 2.06809 20.4802 1.55594 19.2251 1.53532C17.9699 1.5147 16.7568 1.98726 15.8463 2.85146C15.2615 3.40764 14.8244 4.10067 14.5744 4.86802C14.3244 5.63537 14.2694 6.45289 14.4144 7.2468C14.4411 7.3947 14.4337 7.54673 14.3928 7.69135C14.3519 7.83598 14.2787 7.96939 14.1785 8.08146C14.0826 8.19451 13.9604 8.28227 13.8226 8.33701C13.6848 8.39176 13.5357 8.41181 13.3883 8.39541C9.27355 8.10827 5.40991 6.31116 2.53931 3.34919C1.51322 6.5316 0.211462 14.2135 8.4646 17.232C8.63829 17.2944 8.79054 17.405 8.90342 17.551C9.0163 17.697 9.08509 17.8722 9.1017 18.056C9.12037 18.237 9.08707 18.4195 9.0057 18.5823C8.92433 18.745 8.79825 18.8812 8.64225 18.9749C6.6255 19.9583 4.45886 20.5986 2.23148 20.8693Z"
+                                                fill="#FAFAFA" />
+                                        </svg></a>
+                                    <a target="_blank" href="https://www.facebook.com/"><svg width="16" height="26"
+                                            viewBox="0 0 16 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14.5744 1H10.9744C9.38309 1 7.85697 1.63214 6.73175 2.75736C5.60653 3.88258 4.97439 5.4087 4.97439 7V10.6H1.37439V15.4H4.97439V25H9.77439V15.4H13.3744L14.5744 10.6H9.77439V7C9.77439 6.68174 9.90082 6.37652 10.1259 6.15147C10.3509 5.92643 10.6561 5.8 10.9744 5.8H14.5744V1Z"
+                                                stroke="#FAFAFA" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg></a>
+                                    <a target="_blank" href="https://www.instagram.com/"><svg width="27" height="26"
+                                            viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13.5743 18.3327C14.9888 18.3327 16.3453 17.7708 17.3455 16.7706C18.3457 15.7704 18.9076 14.4138 18.9076 12.9993C18.9076 11.5849 18.3457 10.2283 17.3455 9.22811C16.3453 8.22792 14.9888 7.66602 13.5743 7.66602C12.1598 7.66602 10.8033 8.22792 9.80306 9.22811C8.80287 10.2283 8.24097 11.5849 8.24097 12.9993C8.24097 14.4138 8.80287 15.7704 9.80306 16.7706C10.8033 17.7708 12.1598 18.3327 13.5743 18.3327Z"
+                                                stroke="#FAFAFA" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M1.57434 18.3333V7.66667C1.57434 5.89856 2.27672 4.20286 3.52696 2.95262C4.7772 1.70238 6.4729 1 8.24101 1H18.9077C20.6758 1 22.3715 1.70238 23.6217 2.95262C24.872 4.20286 25.5743 5.89856 25.5743 7.66667V18.3333C25.5743 20.1014 24.872 21.7971 23.6217 23.0474C22.3715 24.2976 20.6758 25 18.9077 25H8.24101C6.4729 25 4.7772 24.2976 3.52696 23.0474C2.27672 21.7971 1.57434 20.1014 1.57434 18.3333Z"
+                                                stroke="#FAFAFA" stroke-width="1.5" />
+                                            <path d="M20.9077 5.68068L20.921 5.66602" stroke="#FAFAFA"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="myBtn" onclick="topFunction()" class="backtop">
+            <svg class="scale_06" width="34" height="34" viewBox="0 0 34 34" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.0835 17.0007V33.6673H14.9168V17.0007H0.333496L17.0002 0.333984L33.6668 17.0007H19.0835Z"
+                    fill="white" />
+            </svg>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/app.js"></script>
+</body>
+
+</html>
