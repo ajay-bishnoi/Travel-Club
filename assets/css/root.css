@@ -220,14 +220,14 @@
     --fs-5xl: 54px;
   }
   .moblieView {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: -100%;
     flex-direction: column;
     justify-content: center;
     z-index: 90;
     transition: 300ms linear;
-    height: 100vh;
+    height: 100% !important;
     width: 100%;
     background-color: transparent;
     backdrop-filter: blur(60px);
